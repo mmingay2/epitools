@@ -23,6 +23,12 @@ Note: This tool requires JRE 1.8 or greater and a custom java calculator (availa
 
 ---
 
+## flexProfilePlotter.R
+
+This is an R script that is meant to process, normalize and visualize the files outputted by flexProfiler.sh (above). It strips information about library type, treatment group, position and region of interest from each `*.profile` file in a directory and, for each file, normalizes signal values and calulates the average signal in each X bp in Y kb flanking the centre of each set of regions. The resulting dataframe can quickly and easily be visualized with [ggplot2](http://ggplot2.org/)
+
+---
+
 ## regionRandomizer.sh
 
 This tool compares one set of regions (**ROIs**) to another set of features/regions (**Features**).
