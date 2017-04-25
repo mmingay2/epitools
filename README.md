@@ -1,6 +1,6 @@
 # epitools
 
-###A suite of tools that I developed to analyze high-throughput epigenomics data.
+### A suite of tools that I developed to analyze high-throughput epigenomics data.
 
 #### regionRandomizer
 
