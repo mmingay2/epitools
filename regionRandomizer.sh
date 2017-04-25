@@ -1,3 +1,4 @@
+
 regions=/Users/Mingay/Desktop/epigenomics/manuscript/dev/test_regions/
 dirt=/Users/Mingay/Desktop/epigenomics/manuscript/dev/test_ft/
 temp=/Users/Mingay/Desktop/epigenomics/manuscript/dev/temp/
@@ -83,6 +84,7 @@ do
 		echo "jaccard" "$jaccard"
 		
 #write results to file
+
 		echo $samplename "$nsample" "$tf" "$ntf" "$inters" "$randomI" "$propI" "$window" "$randomW" "$prop" "$jaccard" >> $wout/"results_temp.txt"
 
 rm $temp/"random.bed"
