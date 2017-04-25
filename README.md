@@ -70,6 +70,32 @@ This tool calculates the proportion of regions within a BED file that exist with
 
 ---
 
+## flexCoverageCalculator.sh
+
+This program is a simple `for` loop that iterates through a folder of [bigwig](https://genome.ucsc.edu/goldenpath/help/bigWig.html) files and a folder of bed files and calculates signal in each region for each file type using the UCSC utility [bigWigAverageOverBed](http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/)
+
+`bigWigAverageOverBed`
+
+bigWigAverageOverBed v2 - Compute average score of big wig over each bed, which may have introns.
+
+usage: `bigWigAverageOverBed in.bw in.bed out.tab`
+
+The output columns are:
+* name - name field from bed, which should be unique
+* size - size of bed (sum of exon sizes
+* covered - # bases within exons covered by bigWig
+* sum - sum of values over all bases covered
+* mean0 - average over bases with non-covered bases counting as zeroes
+* mean - average over just covered bases
+
+Options:
+* -stats=stats.ra - Output a collection of overall statistics to stat.ra file
+* -bedOut=out.bed - Make output bed that is echo of input bed but with mean column appended
+* -sampleAroundCenter=N - Take sample at region N bases wide centered around bed item, rather than the usual sample in the bed item.
+* -minMax - include two additional columns containing the min and max observed in the area.
+
+---
+
 ![vitC](https://upload.wikimedia.org/wikipedia/commons/b/b1/Ascorbic_acid_H-bonding.svg)
 
 
